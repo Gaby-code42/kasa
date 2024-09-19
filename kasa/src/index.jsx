@@ -1,0 +1,23 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home' 
+import Error from './components/Error'
+
+//import Header from './components/Header'
+//import Footer from './components/Footer'
+//import Error from './components/Error407'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/"/>
+            <Route path="/"/>
+            <Route path="*" element={<Error />} />
+          </Routes>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
