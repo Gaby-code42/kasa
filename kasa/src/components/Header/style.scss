@@ -1,0 +1,21 @@
+.NavContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    padding: 30px 50px;
+
+    .NavContainer__Link{
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        padding-left: 30px;
+    }
+    
+    .active-link{
+        text-decoration: underline;
+    }
+}
+
+
+

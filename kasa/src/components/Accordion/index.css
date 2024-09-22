@@ -1,0 +1,7 @@
+.Accordion-content{
+    visibility: hidden;
+}
+
+.open .Accordion-content{
+    visibility: visible;
+}

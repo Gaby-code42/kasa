@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home' 
 import Error from './components/Error'
@@ -11,10 +11,11 @@ import Header from './components/Header'
 //import Error from './components/Error407'
 
 // ne pas oublier de modifier url a chaque changement de logement.
-
-ReactDOM.render(
+const root = createRoot(document.getElementById('root')) 
+root.render(
   <React.StrictMode>
     <Router>
+        <Header/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/housing" element={<HousingDetails />}/>  
@@ -22,6 +23,6 @@ ReactDOM.render(
             <Route path="*" element={<Error />} />
           </Routes>
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
+  
 )
