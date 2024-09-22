@@ -1,0 +1,37 @@
+
+.Home {
+    &__Container {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        height: 223px;
+
+        &__Banner{
+            display: flex;
+            position: relative;
+            width: calc(100% - 200px);
+            background-image: url(../../Assets/eric.png);
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            background-size: cover;
+            border-radius: 25px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6); /* Calque noir à 60% */
+                border-radius: 25px;
+                z-index: 1;
+            }
+        }
+        &__Content{
+            color:white;
+            z-index:2;
+        }
+    }
+}
+
