@@ -1,0 +1,23 @@
+.Container__Footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+
+    &__Logo{
+        padding-top:66px;
+        width: 122px;
+        filter: brightness(3);
+    }
+
+    &__Content{
+        padding-top: 52px;
+        padding-bottom: 25px;
+        color: white;
+        font-size: 24px;
+
+    }
+}

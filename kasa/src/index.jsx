@@ -6,6 +6,7 @@ import Error from './components/Error'
 import HousingDetails from './pages/HousingDetails'
 import About from './pages/About'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 //import Footer from './components/Footer'
@@ -23,6 +24,7 @@ root.render(
             <Route path="/about" element={<About />}/>
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer/>
     </Router>
   </React.StrictMode>
   

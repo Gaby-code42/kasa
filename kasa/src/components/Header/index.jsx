@@ -7,7 +7,7 @@ function Header (){
     return(
         <div className='NavContainer'>
         <Link to="/">
-        <img className='NavContainer__logo' src={LOGO} alt='Logo accueil link'/>
+        <img className='NavContainer__Logo' src={LOGO} alt='Logo accueil link'/>
         </Link>
         <div>
             <Link to='/' className={`NavContainer__Link ${location.pathname === '/' ? 'active-link' : ''}`}>
