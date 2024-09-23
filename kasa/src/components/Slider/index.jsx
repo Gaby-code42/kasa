@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Carousel = ({ images }) => {
-    console.log("Images:", images); // Vérifie les images ici
+
     const [currentIndex, setCurrentIndex] = useState(0);
     
     const Next = () => {
@@ -13,17 +13,23 @@ const Carousel = ({ images }) => {
     };
 
     return (
+
         <div className="Carousel">
             <button onClick={Previous} className="Carousel__button__previous">{"<"}</button>
-            <div className="Carousel__Images">
-                {images.map((image, index) => (
-                    <div key={index} className={`Carousel__Images_Unique ${index === currentIndex ? "active" : "inactive"}`}>
-                        {index === currentIndex && <img src={image} alt={`Slide ${index + 1}`} />}
-                    </div>
-                ))}
-            </div>
+
+                <img 
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex}`}
+                className="Carousel__Image"
+                />
+            
             <button onClick={Next} className="Carousel__button__Next">{">"}</button>
+            <span>{currentIndex+1}/{images.length}</span>
         </div>
+
+
+
+        
     );
 };
 

@@ -10,18 +10,13 @@ function HousingDetails (){
     const { title } = useParams();
     const decodedTitle = decodeURIComponent(title);
     const CardData = Data.find((Card) => Card.title === decodedTitle);
-    const images = CardData ? CardData.pictures : [];
-
-    console.log(images)
-
-    //const previousImg = pictureNumber
-    //const nextImg = pictureNumber
+    const rating = CardData ? CardData.rating : [];
 
     return(
-    
+
     <div>
         <div>
-            <Carousel images={CardData.pictures} />        
+            <Carousel images = {CardData.pictures} />        
         </div>
 
         <Accordion title="Description" content={CardData.description}/>
@@ -32,17 +27,13 @@ function HousingDetails (){
                     <li key={index}>{equipment}</li>
                 ))}
             </ul>
-        }
-   />
+            }
+        />
     </div>
 
 
     )
 }
             
-            
-        
-    
-
 
 export default HousingDetails

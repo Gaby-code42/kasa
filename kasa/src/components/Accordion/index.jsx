@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import './index.css'
+import './style.scss'
 
 function Accordion( {title, content}){
     const [open, setOpen] = useState(false)
