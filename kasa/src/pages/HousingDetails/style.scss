@@ -1,0 +1,34 @@
+.Carousel{
+    
+    &__Images{
+        
+        &__Unique {
+            
+            img{
+                
+            }
+        }
+    }
+}
+/* .Carousel {
+    height: 415px;
+    position: relative; // Ajouté pour positionner les boutons correctement
+
+    &__Images {
+        height: 100%; // Assurez-vous que la hauteur est 100% du conteneur
+        overflow: hidden; // Pour éviter que les images débordent
+
+        &__Unique {
+            height: 100%; // Assurez-vous que chaque div prend toute la hauteur
+            display: flex; // Utiliser flex pour centrer l'image
+            justify-content: center; // Centrer horizontalement
+            align-items: center; // Centrer verticalement
+            
+            img {
+                height: 100%; // L'image prend toute la hauteur
+                width: auto; // Conserver l'aspect ratio
+                max-width: 100%; // Ne pas déborder du conteneur
+            }
+        }
+    }
+}*/

@@ -1,14 +1,22 @@
 
 .Home {
+    * {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+    margin: 0;
+    padding: 0;
+   }
+    
     &__Container {
         display: flex;
         justify-content: center;
         margin: 0;
-        height: 223px;
 
         &__Banner{
             display: flex;
             position: relative;
+            height: 223px;
             width: calc(100% - 200px);
             background-image: url(../../Assets/eric.png);
             align-items: center;
@@ -32,6 +40,45 @@
             color:white;
             z-index:2;
         }
+    
+    
+        &__Cards{
+            margin: 50px 0;            
+            background-color: #F6F6F6;
+            width: calc(100% - 212px);
+            border-radius: 25px;
+            &__List{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 36px;
+                padding-top: 43px;
+                border-radius: 10px;
+
+                & li {
+                    position: relative;
+                }
+
+                & img{
+                    border-radius: 10px;
+                    width: 340px;
+                    height: 340px;
+                    object-fit: cover;
+                    
+                }
+            }
+            &__Title{
+                color: white;
+                position: absolute;
+               
+                bottom: 10px; /* Ajuste selon tes besoins */
+                    left: 10px; /* Ajuste selon tes besoins */
+                    max-width: 60%;
+            }
+            
+        
+        } 
     }
 }
 
