@@ -1,3 +1,4 @@
+@import '../../utils/style/GlobalStyle.scss';
 
 .Home {
     * {
@@ -14,16 +15,10 @@
         margin: 0;
 
         &__Banner{
-            display: flex;
-            position: relative;
-            height: 223px;
-            width: calc(100% - 200px);
+            @include Banner-Style;
             background-image: url(../../Assets/eric.png);
-            align-items: center;
-            justify-content: center;
-            object-fit: cover;
-            background-size: cover;
-            border-radius: 25px;
+            background-position: 20% 35%;
+            
             &::before {
                 content: '';
                 position: absolute;

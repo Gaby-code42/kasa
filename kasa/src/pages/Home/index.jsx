@@ -8,7 +8,7 @@ function Home (){
 
     return (
         <li key={card.id}>
-            <Link to={encodedTitle}>
+            <Link to={`/housing/${encodedTitle}`}>
                 <img src={card.cover} alt={card.title} />
                 <h2 className='Home__Container__Cards__Title'>{card.title}</h2>
             </Link>

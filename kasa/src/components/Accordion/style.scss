@@ -1,7 +1,23 @@
-.Accordion-content{
-    visibility: hidden;
-}
+@import '../../utils/style/GlobalStyle.scss';
 
-.open .Accordion-content{
-    visibility: visible;
+.Accordion{
+    width: 50%;
+
+    @include Accordion();
+    
+        & ul{
+            list-style: none;
+            padding: 0;
+            & li{
+                padding-top: 2px;
+            }
+        }
+    }
+
+.TimeTo{
+    transition: transform 0.3s ;
+    &__Rotate{
+        transition: transform 0.3s ease-in-out ;
+        transform: rotate(-180deg);
+    }
 }

@@ -1,0 +1,25 @@
+
+.ErrorContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", system-ui;
+    padding-top: 40px;
+    padding-bottom: 139px;
+    gap:139px;
+    &__Number{
+        font-size: 288px;
+        color: #FF6060;     
+        font-weight: 700;  
+    }
+    &__Content{
+        font-size: 36px;
+        color: #FF6060;
+        font-weight: 500;
+    }
+    &__LinkHome{
+        font-weight: 500;
+        color: black;
+    }
+}

@@ -1,5 +1,6 @@
-const colors = {
+const Colors = {
     primary: '#FF6060',
+    footer: '#000000'
   }
   
-  export default colors
+  export default Colors

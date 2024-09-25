@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import './style.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Carousel = ({ images }) => {
 
@@ -15,7 +19,7 @@ const Carousel = ({ images }) => {
     return (
 
         <div className="Carousel">
-            <button onClick={Previous} className="Carousel__button__previous">{"<"}</button>
+            <button onClick={Previous} className="Carousel__Button__Previous"><FontAwesomeIcon icon={faChevronLeft} /></button>
 
                 <img 
                 src={images[currentIndex]}
@@ -23,8 +27,8 @@ const Carousel = ({ images }) => {
                 className="Carousel__Image"
                 />
             
-            <button onClick={Next} className="Carousel__button__Next">{">"}</button>
-            <span>{currentIndex+1}/{images.length}</span>
+            <button onClick={Next} className="Carousel__Button__Next"><FontAwesomeIcon icon={faChevronRight} /></button>
+            <span className="Carousel__indicatorImage">{currentIndex+1}/{images.length}</span>
         </div>
 
 

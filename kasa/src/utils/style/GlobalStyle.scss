@@ -1,0 +1,38 @@
+@mixin Banner-Style{
+    display: flex;
+    position: relative;
+    height: 223px;
+    width: calc(100% - 200px);
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+@mixin Accordion {
+    .Accordion{
+        &__Title{
+            padding: 11px 20px 11px 10px;
+            display:flex ;
+            background-color: #FF6060;
+            justify-content: space-between;
+            align-self: center;
+            color: white;
+            border-radius: 5px;
+            font-family: "Montserrat", system-ui;
+            font-weight: 700;          
+        }
+        &__Content{
+            &__Hidden{
+            display: none;
+            }
+            &__Open{
+            font-family: "Montserrat", system-ui;
+            display: block;
+            background-color: #F6F6F673;
+            padding: 20px;
+            }           
+    
+    }
+}
+}
