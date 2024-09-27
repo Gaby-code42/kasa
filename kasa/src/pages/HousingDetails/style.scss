@@ -13,12 +13,17 @@
 
         &__SellerProfil{
             display: flex;
+            justify-content: center;
+                align-items: center;            
             & img{
+                justify-content: center;
+                align-items: center;
                 border-radius: 100px;
                 width: 64px;
-                height: 64px;
+                height: 64px;                
             }
             &__Names{
+            padding: 8px;                    
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -43,10 +48,13 @@
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: 24px ;
+            gap:8px
         }
 
         &__Rating{
             justify-self:end;
+            display: flex;
+            gap:10px;
         }
 
         &__Tags{
@@ -64,12 +72,15 @@
         }
         &__Accordion{
             display: flex;
-            width: 100%;
             gap:76px;
             margin-bottom:30px;
         }
 
     }
+}
+
+.Accordion{
+    width: 50%;
 }
 
 

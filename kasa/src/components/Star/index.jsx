@@ -4,11 +4,11 @@ import Data from '../../Data/index.json'
 import { useParams } from 'react-router-dom';
 
 function StarRating (){
-    const { title } = useParams();
-    const decodedTitle = decodeURIComponent(title);
-    const CardData = Data.find((Card) => Card.title === decodedTitle);
+    const { id } = useParams();
+    const decodedTitle = decodeURIComponent(id);
+    const CardData = Data.find((Card) => Card.id === decodedTitle);
     const rating = CardData.rating;
-
+    
     return (
     <div className='Housing__Container__Rating'>
 

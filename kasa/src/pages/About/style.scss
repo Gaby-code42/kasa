@@ -8,19 +8,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:38px;
-    margin-bottom: 30px;
     &__Banner{
-        @include Banner-Style;
+        margin-bottom: 40px;
+        @include Banner-Style($breakpoint-mobile);
         background-image: url(../../Assets/montage.png);
         background-position: 0% 50%;
     }
+
+
     .Accordion{
         &__Title{
             font-size: 24px;
         }
-        &__Content{
-            &__Open{font-size: 18px;}            
-        }
     }
+}
+
+.Accordion{
+    width: 70%;
 }

@@ -1,4 +1,7 @@
-@mixin Banner-Style{
+$breakpoint-mobile: 600px;
+
+
+@mixin Banner-Style($breakpoint-mobile){
     display: flex;
     position: relative;
     height: 223px;
@@ -7,32 +10,37 @@
     justify-content: center;
     background-size: cover;
     border-radius: 25px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: calc(100% - 40px);
+      height: 111px;
+      border-radius: 10px;
+  }
 }
 
+
+
 @mixin Accordion {
-    .Accordion{
-        &__Title{
-            padding: 11px 20px 11px 10px;
-            display:flex ;
-            background-color: #FF6060;
-            justify-content: space-between;
-            align-self: center;
-            color: white;
-            border-radius: 5px;
-            font-family: "Montserrat", system-ui;
-            font-weight: 700;          
-        }
-        &__Content{
-            &__Hidden{
-            display: none;
-            }
-            &__Open{
-            font-family: "Montserrat", system-ui;
-            display: block;
-            background-color: #F6F6F673;
-            padding: 20px;
-            }           
-    
+    .Accordion {
+      &__Title {
+        padding: 11px 20px 11px 10px;
+        display: flex;
+        background-color: #FF6060;
+        justify-content: space-between;
+        align-self: center;
+        color: white;
+        border-radius: 5px;
+        font-family: "Montserrat", system-ui;
+        font-weight: 700;
+        cursor: pointer;
+      }
+  
+      &__Content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        opacity: 0;
+        padding: 20px;
+      }
     }
-}
-}
+  }

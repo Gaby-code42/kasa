@@ -5,23 +5,23 @@ import Data from '../../Data/index.json'
 import Carousel from "../../components/Slider";
 import StarRating from "../../components/Star";
 import SplitName from "../../components/SplitName";
+import Error from "../../components/Error";
 import './style.scss'
 
 
 
 function HousingDetails (){
-    const { title } = useParams();
-    const decodedTitle = decodeURIComponent(title);
+    const { id } = useParams();
+    const decodedTitle = decodeURIComponent(id);
+    const CardData = Data.find((Card) => Card.id === decodedTitle);
 
-    const CardData = Data.find((Card) => Card.title === decodedTitle);
+    if (!CardData) {
+        return (<Error/>)
+    }
 
     const hostName = CardData.host?.name;
     const hostPicture = CardData.host?.picture;
-
-    console.log(CardData)
     
-    
-
     return(
     <div className="Housing">
         
@@ -30,24 +30,29 @@ function HousingDetails (){
         <div className="Housing__Container">
             
         <div className="Housing__Container__Title">
-            <h2>{title}</h2>
+            <h2>{CardData.title}</h2>
             <p>{CardData.location}</p>
         </div>
+
         <div className="Housing__Container__SellerProfil">
             <SplitName host={{ name: hostName }} />
             <img src={hostPicture} alt={hostPicture}/>
         </div>
+
         </div>
 
         <div className="Housing__Container__TagsRating">
+
         <div className="Housing__Container__Tags">
             {CardData.tags.map((tag, index) => (
                 <span key={index}>
                     {tag}
                 </span>
             ))}
-        </div>                
+        </div> 
+
             <StarRating />
+            
         </div>
 
         <div className="Housing__Container__Accordion" >

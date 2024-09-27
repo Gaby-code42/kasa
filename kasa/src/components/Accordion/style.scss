@@ -1,8 +1,6 @@
 @import '../../utils/style/GlobalStyle.scss';
 
 .Accordion{
-    width: 50%;
-
     @include Accordion();
     
         & ul{

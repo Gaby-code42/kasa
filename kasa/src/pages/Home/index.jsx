@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Home (){    
     const HousingCard = Data.map((card) => {
-    const encodedTitle = encodeURIComponent(card.title);
+    const encodedTitle = encodeURIComponent(card.id);
 
     return (
         <li key={card.id}>

@@ -6,14 +6,16 @@ function Header (){
     const location = useLocation();
     return(
         <div className='NavContainer'>
+        <div>
         <Link to="/">
         <img className='NavContainer__Logo' src={LOGO} alt='Logo accueil link'/>
         </Link>
+        </div>
         <div>
-            <Link to='/' className={`NavContainer__Link ${location.pathname === '/' ? 'active-link' : ''}`}>
+            <Link to='/' className={`NavContainer__Link ${location.pathname === '/' ? 'active__link' : ''}`}>
             Accueil
             </Link>
-            <Link to='about' className={`NavContainer__Link ${location.pathname === '/about' ? 'active-link' : ''}`}>
+            <Link to='about' className={`NavContainer__Link ${location.pathname === '/about' ? 'active__link' : ''}`}>
             A Propos
             </Link>            
         </div>
