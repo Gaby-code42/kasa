@@ -1,3 +1,5 @@
+$breakpoint-mobile:600px;
+
 .Housing {
     display: flex;
     flex-direction: column;
@@ -83,6 +85,12 @@
     width: 50%;
 }
 
+@media (max-width: $breakpoint-mobile) {
+    .Housing {
+        
+    }
+
+}
 
         
 

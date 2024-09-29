@@ -7,8 +7,6 @@
     align-items: center;
     flex-direction: column;
     
-
-
     &__Logo{
         padding-top:66px;
         width: 122px;
@@ -21,5 +19,20 @@
         color: white;
         font-size: 24px;
 
+    }
+}
+
+@media (max-width:600px){
+    .Container__Footer{
+        width: 100%;
+        &__Logo{
+            padding-top: 46px;       
+        }
+        &__Content{
+            font-size: 12px;
+            padding-top: 10px;
+            padding-bottom: 46px;
+            width: 27%;
+        }
     }
 }

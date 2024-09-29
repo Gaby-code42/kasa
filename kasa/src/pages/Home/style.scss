@@ -70,9 +70,9 @@
             &__Title{
                 color: white;
                 position: absolute;
-               
+                font-size: 18px;
                 bottom: 10px;
-                left: 10px;
+                left: 15px;
                 max-width: 60%;
             }
             
@@ -93,7 +93,6 @@
             &__Banner{
                 &::before {
                     border-radius: 10px;
-
                 }
             }
 
@@ -105,13 +104,20 @@
                 
             }
             &__Cards{
-                width: calc(100% - 40px);
+                margin: 10px;
+                width: calc(100% - 20px);
+                &__List{
+                    gap:10px
+                }
+
+                &__Title{
+                    left: 15px;
+                }
                 &__List{
                     padding: 0;
                     & img{
-                       width:calc(100% - 40px);
-                       height: 255px;
-                        
+                       width:335px;
+                       height: 255px;                        
                     }
                 }
             }

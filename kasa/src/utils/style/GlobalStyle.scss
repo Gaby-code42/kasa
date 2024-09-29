@@ -12,7 +12,7 @@ $breakpoint-mobile: 600px;
     border-radius: 25px;
 
     @media (max-width: $breakpoint-mobile) {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       height: 111px;
       border-radius: 10px;
   }
