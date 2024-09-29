@@ -10,7 +10,7 @@ function StarRating (){
     const rating = CardData.rating;
     
     return (
-    <div className='Housing__Container__Rating'>
+    <div className='Housing__Rating'>
 
     {[...Array(5)].map((_, index) => (
         <img

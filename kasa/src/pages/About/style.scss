@@ -17,12 +17,28 @@
 
 
     .Accordion{
+        width: 70%;
         &__Title{
             font-size: 24px;
         }
     }
 }
 
-.Accordion{
-    width: 70%;
+@media (max-width: $breakpoint-mobile) {
+    
+.About{
+    &__Banner{
+        margin-bottom: 20px;
+    }
+    
+    .Accordion{
+        width: calc(100% - 20px);
+        &__Title{
+            font-size: 13px;
+        }
+        &__Content{
+            padding: 10px;
+        }
+    }
+}
 }

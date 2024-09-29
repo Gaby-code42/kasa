@@ -1,3 +1,4 @@
+$breakpoint-mobile:600px;
 
 .ErrorContainer{
     display:flex;
@@ -17,9 +18,27 @@
         font-size: 36px;
         color: #FF6060;
         font-weight: 500;
+        white-space: nowrap;
     }
     &__LinkHome{
         font-weight: 500;
         color: black;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .ErrorContainer{
+        gap:113px;
+        &__Number{
+            font-size: 99px;
+        }
+        &__Content{
+            width: calc(100% - 30px);
+            font-size: 18px;
+            text-align: center;
+        }
+        &__LinkHome{
+            font-size: 14px;
+        }
     }
 }

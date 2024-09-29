@@ -26,24 +26,18 @@ function HousingDetails (){
     <div className="Housing">
         
         <Carousel images = {CardData.pictures} />  
-            
-        <div className="Housing__Container">
-            
-        <div className="Housing__Container__Title">
+                 
+        <div className="Housing__Title">
             <h2>{CardData.title}</h2>
             <p>{CardData.location}</p>
         </div>
 
-        <div className="Housing__Container__SellerProfil">
+        <div className="Housing__SellerProfil">
             <SplitName host={{ name: hostName }} />
             <img src={hostPicture} alt={hostPicture}/>
         </div>
 
-        </div>
-
-        <div className="Housing__Container__TagsRating">
-
-        <div className="Housing__Container__Tags">
+        <div className="Housing__Tags">
             {CardData.tags.map((tag, index) => (
                 <span key={index}>
                     {tag}
@@ -53,23 +47,18 @@ function HousingDetails (){
 
             <StarRating />
             
-        </div>
-
-        <div className="Housing__Container__Accordion" >
-            <Accordion title="Description" content={CardData.description}/>
-            <Accordion title="Équipements" content={
+            <div className="Container__Accordion">
+            <Accordion  title="Description" content={CardData.description}/>
+            <Accordion  title="Équipements" content={
                 <ul>
                     {CardData.equipments.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}
                 </ul>
                 }
-            />
-        </div>
-        
+            /> 
+            </div> 
     </div>
-
-
     )
 }
             

@@ -42,3 +42,21 @@ $breakpoint-mobile:600px;
     }    
 }
 
+@media (max-width: $breakpoint-mobile) {
+    .Carousel {
+        height: 255px;
+        width: 100%;
+        &__Image{
+            object-fit: cover; 
+            height: 100%;
+        }
+        &__Button{
+            &__Next{
+                font-size: 24px;
+            }
+            &__Previous{
+                font-size: 24px;
+            }
+    }
+}
+}
