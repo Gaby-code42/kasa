@@ -104,10 +104,11 @@
                 
             }
             &__Cards{
-                margin: 10px;
+                margin: 20px 10px;
                 width: calc(100% - 20px);
+                background-color: white;
                 &__List{
-                    gap:10px
+                    gap:20px
                 }
 
                 &__Title{
