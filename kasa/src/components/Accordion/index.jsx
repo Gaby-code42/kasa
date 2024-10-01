@@ -42,7 +42,7 @@ function Accordion({ title, content }) {
         style={{
           maxHeight: maxHeight, 
           opacity: opacity, 
-          transition: "max-height 0.5s ease-in-out, opacity 0.5s ease-in-out",  
+          transition: "max-height 1s ease-in-out, opacity 1s ease-in-out",  
         }}
         className="Accordion__Content"
       >
