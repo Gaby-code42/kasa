@@ -37,9 +37,6 @@ $breakpoint-mobile: 600px;
   
       &__Content {
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-        opacity: 0;
         padding: 20px;
       }
     }
