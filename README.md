@@ -1,7 +1,7 @@
 # Kasa
 
 Application React d'un site de location de logements entre particuliers. C'est
-un projet de la formation Intégrateur web d'OpenClassrooms.
+un projet de la formation Développeur Web d'OpenClassrooms.
 
 ## Fonctionnalités
 
@@ -26,7 +26,7 @@ React 18 · React Router 6 · SCSS · Font Awesome · Create React App
 ## Organisation
 
 ```
-kasa/src/
+src/
 ├── components/   Accordion, Error, Footer, Header, Slider, SplitName, Star
 ├── pages/        Home, HousingDetails, About
 ├── Data/         données des logements (JSON)
@@ -36,8 +36,8 @@ kasa/src/
 ## Lancer le projet
 
 ```bash
-git clone https://github.com/Gaby-code42/Kasa.git
-cd Kasa/kasa
+git clone https://github.com/Gaby-code42/kasa.git
+cd kasa
 npm install
 npm start      # http://localhost:3000
 ```
